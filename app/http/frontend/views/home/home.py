@@ -20,6 +20,6 @@ class HomeView(FrontendBaseView):
 	@route('/home')
 	def home(self):
 		self.template = '/home/home.html'
-		self.ctx['title'] = 'Flask-Warp'
+		self.pageTitle = current_app.config['APP_NAME']
 		self.ctx['message'] = 'Flask-Warp Home Page'
 		return self.render_out()

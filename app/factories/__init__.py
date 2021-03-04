@@ -1,1 +1,1 @@
-from .factories import blueprints_factory
+from .factories import ( blueprints_factory, config_factory, )

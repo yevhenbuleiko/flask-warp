@@ -25,5 +25,6 @@ class BaseView(FlaskView):
 
 	# Render template with data from ctx directory
 	def render_out(self):
+		self.ctx['title'] = self.pageTitle
 		return render_template(self.templ_prefix+self.template, **self.ctx)
 		
