@@ -3,11 +3,12 @@ from app.helpers import dict_from_yaml_file
 from app.factories import ( blueprints_factory, config_factory, )
 # Import Blueprints
 from app.http.frontend import frontend
+from app.http.error import error
 
 __all__ = ('create_app')
 
 # List Of Blueprints
-blueprints = ( frontend(), )
+blueprints = ( frontend(), error(), )
 
 def create_app(config_file=None):
 	app = Flask(__name__)
