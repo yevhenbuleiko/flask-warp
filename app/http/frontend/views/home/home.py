@@ -1,6 +1,7 @@
 from app.http.frontend.vendor.view import FrontendBaseView
 from flask_classy import route
-from flask import (render_template, g, request, url_for, current_app, send_from_directory, json, redirect, make_response, abort)
+from flask import (render_template, g, request, url_for, current_app, 
+	send_from_directory, json, redirect, make_response, abort, )
 
 __all__ = ('HomeView')
 

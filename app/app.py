@@ -4,11 +4,12 @@ from app.factories import ( blueprints_factory, config_factory, )
 # Import Blueprints
 from app.http.frontend import frontend
 from app.http.error import error
+from app.http.backend import backend
 
 __all__ = ('create_app')
 
 # List Of Blueprints
-blueprints = ( frontend(), error(), )
+blueprints = ( frontend(), error(), backend(), )
 
 def create_app(config_file=None):
 	app = Flask(__name__)
